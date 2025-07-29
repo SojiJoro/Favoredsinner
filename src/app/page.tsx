@@ -53,14 +53,24 @@ export default function Home() {
             marginBottom: '24px',
             lineHeight: '1.1'
           }}>
-            Surreal visuals. Bold designs.
+            Art like a dream. Tech like a machine.
           </h1>
           <p style={{
             fontSize: 'clamp(1.25rem, 3vw, 2rem)',
             color: '#657786',
+            marginBottom: '24px'
+          }}>
+            I design, I deploy, I disturb comfort zones — with visuals, strategy, and code that all hit different.
+          </p>
+          <p style={{
+            fontSize: 'clamp(1rem, 2.5vw, 1.5rem)',
+            color: '#1DA1F2',
+            fontWeight: '500',
             marginBottom: '48px'
           }}>
-            No face, just craft.
+            <Link href="/gallery" style={{ textDecoration: 'none', color: '#1DA1F2' }}>
+              Explore the work
+            </Link>
           </p>
           
           <div style={{

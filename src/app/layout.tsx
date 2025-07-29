@@ -3,9 +3,10 @@ import Link from 'next/link'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Favored Sinner - Surreal visuals. Bold designs.',
-  description: 'No face, just craft. Creative services and surreal digital art.',
-  keywords: 'surreal art, digital art, web design, creative services',
+  title: 'Favored Sinner - Art like a dream, tech like a machine',
+  description:
+    'Favored Sinner blends surreal digital art with DevOps, web design, storytelling, and strategy. One creative mind, many bold services. Explore the strange, the smart, and the intentional.',
+  keywords: 'surreal art, digital art, web design, devops, strategy, creative services',
 }
 
 export default function RootLayout({
@@ -83,6 +84,9 @@ export default function RootLayout({
             <p style={{ marginBottom: '8px' }}>© 2025 Favored Sinner</p>
             <p style={{ fontSize: '14px' }}>
               Contact: <a href="mailto:info@favoredsinner.com" style={{ color: '#1DA1F2', textDecoration: 'none' }}>info@favoredsinner.com</a>
+            </p>
+            <p style={{ fontSize: '14px', marginTop: '16px', color: '#657786' }}>
+              Built and run by a designer who writes false memoirs and a DevOps lead who sleeps next to his SSH keys.
             </p>
           </div>
         </footer>
