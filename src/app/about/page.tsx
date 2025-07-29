@@ -86,7 +86,7 @@ export default function AboutPage() {
               transform: 'translateX(-50%)',
               lineHeight: '1'
             }}>
-              "
+              &ldquo;
             </div>
             <p style={{
               fontFamily: 'Playfair Display, serif',

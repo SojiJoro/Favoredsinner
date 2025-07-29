@@ -256,7 +256,7 @@ export default function Home() {
             color: '#657786',
             marginBottom: '32px'
           }}>
-            Let's create something extraordinary together.
+            Let&apos;s create something extraordinary together.
           </p>
           <Link 
             href="/contact" 

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -37,26 +38,29 @@ export default function RootLayout({
             justifyContent: 'space-between',
             alignItems: 'center'
           }}>
-            <a href="/" style={{
-              fontFamily: 'Playfair Display, serif',
-              fontSize: '24px',
-              color: '#14171a',
-              textDecoration: 'none',
-              fontWeight: 'bold'
-            }}>
+            <Link
+              href="/"
+              style={{
+                fontFamily: 'Playfair Display, serif',
+                fontSize: '24px',
+                color: '#14171a',
+                textDecoration: 'none',
+                fontWeight: 'bold'
+              }}
+            >
               Favored Sinner
-            </a>
+            </Link>
             
             <div style={{
               display: 'flex',
               gap: '32px',
               alignItems: 'center'
             }}>
-              <a href="/about" style={{ color: '#657786', textDecoration: 'none' }}>About</a>
-              <a href="/services" style={{ color: '#657786', textDecoration: 'none' }}>Services</a>
-              <a href="/gallery" style={{ color: '#657786', textDecoration: 'none' }}>Gallery</a>
-              <a href="/blog" style={{ color: '#657786', textDecoration: 'none' }}>Blog</a>
-              <a href="/contact" style={{ color: '#657786', textDecoration: 'none' }}>Contact</a>
+              <Link href="/about" style={{ color: '#657786', textDecoration: 'none' }}>About</Link>
+              <Link href="/services" style={{ color: '#657786', textDecoration: 'none' }}>Services</Link>
+              <Link href="/gallery" style={{ color: '#657786', textDecoration: 'none' }}>Gallery</Link>
+              <Link href="/blog" style={{ color: '#657786', textDecoration: 'none' }}>Blog</Link>
+              <Link href="/contact" style={{ color: '#657786', textDecoration: 'none' }}>Contact</Link>
             </div>
           </div>
         </nav>
