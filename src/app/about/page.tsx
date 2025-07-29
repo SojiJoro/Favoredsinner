@@ -18,194 +18,57 @@ export default function AboutPage() {
         </h1>
       </section>
       
-      {/* About Content */}
       <section style={{
         maxWidth: '800px',
         margin: '0 auto',
-        padding: '40px 24px 80px',
-        textAlign: 'center'
+        padding: '40px 24px 80px'
       }}>
         <div style={{
           backgroundColor: 'white',
           borderRadius: '24px',
           padding: '60px 48px',
           boxShadow: '0 8px 24px rgba(29, 161, 242, 0.08)',
-          border: '1px solid #e1e8ed'
+          border: '1px solid #e1e8ed',
+          lineHeight: '1.8'
         }}>
           <p style={{
             fontSize: '28px',
             color: '#14171a',
-            marginBottom: '40px',
-            fontFamily: 'Playfair Display, serif',
-            lineHeight: '1.4'
+            marginBottom: '24px',
+            fontFamily: 'Playfair Display, serif'
           }}>
-            Favored Sinner is not a name. It&apos;s an idea.
+            Favored Sinner is not a name. It’s a contradiction I live with, a storyteller and a system builder, a digital artist and a DevOps engineer, all rolled into one loud quiet presence.
           </p>
-          
-          <p style={{
-            fontSize: '18px',
-            color: '#657786',
-            marginBottom: '32px',
-            lineHeight: '1.8'
-          }}>
-            I create things that speak louder than words. No biography. Just creativity.
+          <p style={{ fontSize: '18px', color: '#14171a', marginBottom: '24px' }}>
+            I create things that look like art but behave like infrastructure. Stories that read like burnt memoirs, visuals that stick to your head, platforms that don’t crash when the world shows up.
           </p>
-          
-          <p style={{
-            fontSize: '18px',
-            color: '#657786',
-            marginBottom: '32px',
-            lineHeight: '1.8'
-          }}>
-            In a world of endless self-promotion and personal branding, I choose to let the work speak for itself. 
-            Every piece, every project, every pixel is crafted with intention.
+          <p style={{ fontSize: '18px', color: '#14171a', marginBottom: '24px' }}>
+            Some days I draw worlds from pixels and emotion.<br />Other days I automate backend deployments and secure cloud infrastructure like it’s poetry.
           </p>
-          
-          <p style={{
-            fontSize: '18px',
-            color: '#657786',
-            marginBottom: '48px',
-            lineHeight: '1.8'
-          }}>
-            Some call it art. Some call it service. I call it necessary.
+          <p style={{ fontSize: '18px', color: '#14171a', marginBottom: '24px' }}>
+            This site is my middle ground.<br />Where surreal art meets solid systems.<br />Where bold tweets meet well-architected platforms.<br />Where stories, code, and design are treated with the same respect.
           </p>
-          
-          {/* Quote Section */}
-          <div style={{
-            marginTop: '48px',
-            paddingTop: '48px',
-            borderTop: '2px solid #e8f5fe',
-            position: 'relative'
-          }}>
-            <div style={{
-              fontSize: '60px',
-              color: '#e8f5fe',
-              position: 'absolute',
-              top: '20px',
-              left: '50%',
-              transform: 'translateX(-50%)',
-              lineHeight: '1'
-            }}>
-              &ldquo;
-            </div>
-            <p style={{
-              fontFamily: 'Playfair Display, serif',
-              fontSize: '24px',
-              color: '#1DA1F2',
-              fontStyle: 'italic',
-              lineHeight: '1.6',
-              padding: '0 20px'
-            }}>
-              The best way to find yourself is to lose yourself in the service of others.
-            </p>
-          </div>
-        </div>
-        
-        {/* Additional Philosophy Section */}
-        <div style={{
-          marginTop: '60px',
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-          gap: '32px'
-        }}>
-          <div style={{
-            textAlign: 'center'
-          }}>
-            <div style={{
-              width: '60px',
-              height: '60px',
-              margin: '0 auto 16px',
-              borderRadius: '50%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              background: 'linear-gradient(135deg, #e8f5fe 0%, #1DA1F2 100%)',
-              fontSize: '28px'
-            }}>
-              🎭
-            </div>
-            <h3 style={{
-              fontFamily: 'Playfair Display, serif',
-              fontSize: '20px',
-              color: '#14171a',
-              marginBottom: '8px'
-            }}>
-              Anonymous
-            </h3>
-            <p style={{
-              fontSize: '14px',
-              color: '#657786',
-              lineHeight: '1.6'
-            }}>
-              Identity is irrelevant when the work speaks volumes
-            </p>
-          </div>
-          
-          <div style={{
-            textAlign: 'center'
-          }}>
-            <div style={{
-              width: '60px',
-              height: '60px',
-              margin: '0 auto 16px',
-              borderRadius: '50%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              background: 'linear-gradient(135deg, #e8f5fe 0%, #1DA1F2 100%)',
-              fontSize: '28px'
-            }}>
-              ✨
-            </div>
-            <h3 style={{
-              fontFamily: 'Playfair Display, serif',
-              fontSize: '20px',
-              color: '#14171a',
-              marginBottom: '8px'
-            }}>
-              Creative
-            </h3>
-            <p style={{
-              fontSize: '14px',
-              color: '#657786',
-              lineHeight: '1.6'
-            }}>
-              Every project is an opportunity to push boundaries
-            </p>
-          </div>
-          
-          <div style={{
-            textAlign: 'center'
-          }}>
-            <div style={{
-              width: '60px',
-              height: '60px',
-              margin: '0 auto 16px',
-              borderRadius: '50%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              background: 'linear-gradient(135deg, #e8f5fe 0%, #1DA1F2 100%)',
-              fontSize: '28px'
-            }}>
-              🎯
-            </div>
-            <h3 style={{
-              fontFamily: 'Playfair Display, serif',
-              fontSize: '20px',
-              color: '#14171a',
-              marginBottom: '8px'
-            }}>
-              Intentional
-            </h3>
-            <p style={{
-              fontSize: '14px',
-              color: '#657786',
-              lineHeight: '1.6'
-            }}>
-              Purpose-driven design with meaning in every detail
-            </p>
-          </div>
+          <p style={{ fontSize: '18px', color: '#14171a', marginBottom: '16px', fontWeight: 'bold' }}>
+            I build and offer:
+          </p>
+          <ul style={{ listStyleType: 'disc', paddingLeft: '20px', marginBottom: '24px' }}>
+            <li>Surreal digital art for visuals that don’t just decorate, they disturb and inspire</li>
+            <li>Web design &amp; UI that tells stories with every scroll</li>
+            <li>Digital strategy for creatives and brands who want meaning, not just metrics</li>
+            <li>SEO &amp; content planning that respects both bots and humans</li>
+            <li>Cloud infrastructure that scales quietly, securely, and efficiently</li>
+            <li>DevOps services like CI/CD, monitoring, AWS builds, disaster recovery, backup</li>
+            <li>IT support &amp; cybersecurity that’s calm, smart, and silent until it needs to shout</li>
+            <li>Social media growth &amp; branding if you want to make noise without sounding forced</li>
+            <li>CV review &amp; career support especially for dyslexic talents breaking into tech</li>
+            <li>PPC campaigns &amp; automation for when you want results and receipts</li>
+          </ul>
+          <p style={{ fontSize: '18px', color: '#14171a', marginBottom: '24px' }}>
+            This isn’t a studio. This is one person with layered skills, strong opinions, and a deep respect for clean work and controlled chaos.
+          </p>
+          <p style={{ fontSize: '18px', color: '#14171a' }}>
+            If you’re here, you’re welcome to explore.<br />If it feels strange, surreal or slightly too true, then it’s working.
+          </p>
         </div>
       </section>
     </div>
