@@ -8,7 +8,7 @@ export default function AboutPage() {
         
         <div className="prose prose-lg mx-auto text-center">
           <p className="text-xl text-deep-grey mb-8">
-            Favored Sinner is not a name. It's an idea.
+            Favored Sinner is not a name. It&apos;s an idea.
           </p>
           
           <p className="text-lg text-deep-grey mb-6">
@@ -25,9 +25,9 @@ export default function AboutPage() {
           </p>
           
           <div className="mt-12 pt-12 border-t border-gray-200">
-            <p className="font-serif text-2xl text-twitter-blue">
-              "The best way to find yourself is to lose yourself in the service of others."
-            </p>
+              <p className="font-serif text-2xl text-twitter-blue">
+                &ldquo;The best way to find yourself is to lose yourself in the service of others.&rdquo;
+              </p>
           </div>
         </div>
       </section>
