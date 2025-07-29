@@ -1,5 +1,6 @@
 import { blogPosts } from '@/data/blog-posts'
 import { notFound } from 'next/navigation'
+import Link from 'next/link'
 
 export async function generateStaticParams() {
   return blogPosts.map((post) => ({
@@ -7,7 +8,8 @@ export async function generateStaticParams() {
   }))
 }
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
+export default function BlogPostPage(props: unknown) {
+  const { params } = props as { params: { slug: string } }
   const post = blogPosts.find((p) => p.slug === params.slug)
   
   if (!post) {
@@ -46,9 +48,9 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         </div>
         
         <div className="mt-12 pt-8 border-t border-gray-200">
-          <a href="/blog" className="text-twitter-blue hover:opacity-80">
+          <Link href="/blog" className="text-twitter-blue hover:opacity-80">
             ← Back to all posts
-          </a>
+          </Link>
         </div>
       </article>
     </div>

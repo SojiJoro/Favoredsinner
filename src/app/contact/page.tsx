@@ -8,7 +8,7 @@ export default function ContactPage() {
         
         <div className="text-center">
           <p className="text-xl text-deep-grey mb-8">
-            Ready to work together? Have a question? Let's talk.
+            Ready to work together? Have a question? Let&apos;s talk.
           </p>
           
           <div className="bg-light-grey rounded-2xl p-8 max-w-md mx-auto">

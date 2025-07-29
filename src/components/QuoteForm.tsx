@@ -34,7 +34,7 @@ export default function QuoteForm() {
       } else {
         setSubmitStatus('error')
       }
-    } catch (error) {
+    } catch {
       setSubmitStatus('error')
     } finally {
       setIsSubmitting(false)
@@ -53,10 +53,10 @@ export default function QuoteForm() {
       >
         {isSubmitting ? 'Sending...' : 'Submit Request'}
       </button>
-      
+
       {submitStatus === 'success' && (
         <p className="text-green-600 text-center">
-          Thank you! We'll get back to you within 24 hours.
+          Thank you! We&apos;ll get back to you within 24 hours.
         </p>
       )}
       

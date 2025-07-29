@@ -20,7 +20,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
       
       {service.testimonial && (
         <p className="italic text-sm text-deep-grey mt-3 mb-4">
-          "{service.testimonial}"
+          &ldquo;{service.testimonial}&rdquo;
         </p>
       )}
       
