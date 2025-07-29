@@ -41,13 +41,15 @@ export default function BlogCard({ post }: BlogCardProps) {
         alignItems: 'center',
         gap: '16px'
       }}>
-        <span>{new Date(post.date).toLocaleDateString('en-US', { 
-          year: 'numeric', 
-          month: 'long', 
-          day: 'numeric' 
+        <span>{new Date(post.date).toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
         })}</span>
         <span style={{ color: '#e1e8ed' }}>•</span>
         <span>{Math.ceil(post.content.split(' ').length / 200)} min read</span>
+        <span style={{ color: '#e1e8ed' }}>•</span>
+        <span>{post.category}</span>
       </p>
       
       <p style={{

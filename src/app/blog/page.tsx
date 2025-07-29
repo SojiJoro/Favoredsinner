@@ -17,7 +17,7 @@ export default function BlogPage() {
           color: '#14171a',
           marginBottom: '16px'
         }}>
-          Thoughts & Stories
+          False Memoirs
         </h1>
         <p style={{
           fontSize: '20px',
@@ -25,7 +25,7 @@ export default function BlogPage() {
           maxWidth: '600px',
           margin: '0 auto'
         }}>
-          Musings from a faceless creator
+          Stories and systems from behind the curtain
         </p>
       </section>
       

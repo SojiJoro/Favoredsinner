@@ -1,6 +1,7 @@
 'use client'
 import Link from 'next/link'
 import StarRating from './StarRating'
+import PayPalButton from './PayPalButton'
 import { Service } from '@/data/services'
 
 interface ServiceCardProps {
@@ -98,33 +99,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
         >
           Request Quote
         </Link>
-        <button 
-          style={{
-            flex: '1',
-            display: 'inline-flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            border: '2px solid #1DA1F2',
-            color: '#1DA1F2',
-            padding: '10px 18px',
-            borderRadius: '50px',
-            fontWeight: '500',
-            fontSize: '14px',
-            backgroundColor: 'transparent',
-            cursor: 'pointer',
-            transition: 'all 0.3s ease'
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.backgroundColor = '#1DA1F2';
-            e.currentTarget.style.color = 'white';
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.backgroundColor = 'transparent';
-            e.currentTarget.style.color = '#1DA1F2';
-          }}
-        >
-          Pay with PayPal
-        </button>
+        <PayPalButton amount={service.price?.replace(/[^\d.]/g, '') || '0'} description={service.title} />
       </div>
     </div>
   )

@@ -46,13 +46,15 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             marginBottom: '24px',
             fontSize: '16px'
           }}>
-            {new Date(post.date).toLocaleDateString('en-US', { 
-              year: 'numeric', 
-              month: 'long', 
-              day: 'numeric' 
+            {new Date(post.date).toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
             })}
             <span style={{ margin: '0 16px', color: '#e1e8ed' }}>•</span>
             {Math.ceil(post.content.split(' ').length / 200)} min read
+            <span style={{ margin: '0 16px', color: '#e1e8ed' }}>•</span>
+            {post.category}
           </p>
           
           <div style={{
