@@ -55,7 +55,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
           paddingLeft: '16px',
           margin: '16px 0'
         }}>
-          "{service.testimonial}"
+          &ldquo;{service.testimonial}&rdquo;
         </p>
       )}
       
