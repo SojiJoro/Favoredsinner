@@ -1,5 +1,6 @@
 import { blogPosts } from '@/data/blog-posts'
 import { notFound } from 'next/navigation'
+import type { PageProps } from 'next'
 
 export async function generateStaticParams() {
   return blogPosts.map((post) => ({
@@ -7,7 +8,7 @@ export async function generateStaticParams() {
   }))
 }
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
+export default function BlogPostPage({ params }: PageProps<{ slug: string }>) {
   const post = blogPosts.find((p) => p.slug === params.slug)
   
   if (!post) {
