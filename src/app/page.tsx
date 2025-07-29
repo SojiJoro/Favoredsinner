@@ -1,103 +1,282 @@
-import Image from "next/image";
+import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+      {/* Hero Section */}
+      <section style={{
+        minHeight: '100vh',
+        background: 'linear-gradient(135deg, #ffffff 0%, #e8f5fe 100%)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        position: 'relative',
+        overflow: 'hidden'
+      }}>
+        {/* Animated orbs */}
+        <div style={{
+          position: 'absolute',
+          top: '-100px',
+          left: '-100px',
+          width: '400px',
+          height: '400px',
+          background: '#1DA1F2',
+          borderRadius: '50%',
+          filter: 'blur(120px)',
+          opacity: '0.2'
+        }}></div>
+        <div style={{
+          position: 'absolute',
+          bottom: '-200px',
+          right: '-200px',
+          width: '600px',
+          height: '600px',
+          background: '#1DA1F2',
+          borderRadius: '50%',
+          filter: 'blur(120px)',
+          opacity: '0.2'
+        }}></div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <div style={{
+          maxWidth: '1024px',
+          margin: '0 auto',
+          padding: '0 24px',
+          textAlign: 'center',
+          position: 'relative',
+          zIndex: 10
+        }}>
+          <h1 style={{
+            fontSize: 'clamp(3rem, 8vw, 5rem)',
+            fontFamily: 'Playfair Display, serif',
+            fontWeight: 'bold',
+            color: '#14171a',
+            marginBottom: '24px',
+            lineHeight: '1.1'
+          }}>
+            Surreal visuals. Bold designs.
+          </h1>
+          <p style={{
+            fontSize: 'clamp(1.25rem, 3vw, 2rem)',
+            color: '#657786',
+            marginBottom: '48px'
+          }}>
+            No face, just craft.
+          </p>
+          
+          <div style={{
+            display: 'flex',
+            flexDirection: 'row',
+            gap: '16px',
+            justifyContent: 'center',
+            flexWrap: 'wrap'
+          }}>
+            <Link 
+              href="/gallery" 
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                backgroundColor: '#1DA1F2',
+                color: 'white',
+                padding: '16px 32px',
+                borderRadius: '50px',
+                fontWeight: '500',
+                textDecoration: 'none',
+                boxShadow: '0 4px 14px rgba(29, 161, 242, 0.4)'
+              }}
+            >
+              View Surreal Art
+            </Link>
+            <Link 
+              href="/services" 
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                border: '2px solid #1DA1F2',
+                color: '#1DA1F2',
+                padding: '14px 30px',
+                borderRadius: '50px',
+                fontWeight: '500',
+                textDecoration: 'none',
+                backgroundColor: 'transparent'
+              }}
+            >
+              Request a Service
+            </Link>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+      </section>
+
+      {/* Feature Section */}
+      <section style={{
+        padding: '80px 0',
+        backgroundColor: '#fafbfc'
+      }}>
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+          gap: '32px',
+          maxWidth: '1200px',
+          margin: '0 auto',
+          padding: '0 24px'
+        }}>
+          {/* Digital Art Card */}
+          <div style={{
+            backgroundColor: 'white',
+            borderRadius: '16px',
+            padding: '32px',
+            textAlign: 'center',
+            boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)',
+            border: '1px solid #e1e8ed'
+          }}>
+            <div style={{
+              width: '80px',
+              height: '80px',
+              margin: '0 auto 24px',
+              borderRadius: '16px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              background: 'linear-gradient(135deg, #e8f5fe 0%, #1DA1F2 100%)',
+              fontSize: '36px'
+            }}>
+              🎨
+            </div>
+            <h3 style={{
+              fontFamily: 'Playfair Display, serif',
+              fontSize: '24px',
+              marginBottom: '12px',
+              color: '#14171a'
+            }}>Digital Art</h3>
+            <p style={{
+              color: '#657786',
+              lineHeight: '1.6'
+            }}>
+              Surreal creations that challenge perception
+            </p>
+          </div>
+          
+          {/* Web Design Card */}
+          <div style={{
+            backgroundColor: 'white',
+            borderRadius: '16px',
+            padding: '32px',
+            textAlign: 'center',
+            boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)',
+            border: '1px solid #e1e8ed'
+          }}>
+            <div style={{
+              width: '80px',
+              height: '80px',
+              margin: '0 auto 24px',
+              borderRadius: '16px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              background: 'linear-gradient(135deg, #e8f5fe 0%, #1DA1F2 100%)',
+              fontSize: '36px'
+            }}>
+              💻
+            </div>
+            <h3 style={{
+              fontFamily: 'Playfair Display, serif',
+              fontSize: '24px',
+              marginBottom: '12px',
+              color: '#14171a'
+            }}>Web Design</h3>
+            <p style={{
+              color: '#657786',
+              lineHeight: '1.6'
+            }}>
+              Clean, modern websites that tell your story
+            </p>
+          </div>
+          
+          {/* Digital Strategy Card */}
+          <div style={{
+            backgroundColor: 'white',
+            borderRadius: '16px',
+            padding: '32px',
+            textAlign: 'center',
+            boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)',
+            border: '1px solid #e1e8ed'
+          }}>
+            <div style={{
+              width: '80px',
+              height: '80px',
+              margin: '0 auto 24px',
+              borderRadius: '16px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              background: 'linear-gradient(135deg, #e8f5fe 0%, #1DA1F2 100%)',
+              fontSize: '36px'
+            }}>
+              🚀
+            </div>
+            <h3 style={{
+              fontFamily: 'Playfair Display, serif',
+              fontSize: '24px',
+              marginBottom: '12px',
+              color: '#14171a'
+            }}>Digital Strategy</h3>
+            <p style={{
+              color: '#657786',
+              lineHeight: '1.6'
+            }}>
+              SEO, social media, and growth solutions
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section style={{
+        padding: '80px 0',
+        backgroundColor: 'white'
+      }}>
+        <div style={{
+          maxWidth: '1024px',
+          margin: '0 auto',
+          padding: '0 24px',
+          textAlign: 'center'
+        }}>
+          <h2 style={{
+            fontSize: 'clamp(2rem, 5vw, 3rem)',
+            fontFamily: 'Playfair Display, serif',
+            fontWeight: 'bold',
+            color: '#14171a',
+            marginBottom: '24px'
+          }}>
+            Ready to bring your vision to life?
+          </h2>
+          <p style={{
+            fontSize: '18px',
+            color: '#657786',
+            marginBottom: '32px'
+          }}>
+            Let's create something extraordinary together.
+          </p>
+          <Link 
+            href="/contact" 
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              backgroundColor: '#1DA1F2',
+              color: 'white',
+              padding: '16px 32px',
+              borderRadius: '50px',
+              fontWeight: '500',
+              textDecoration: 'none',
+              boxShadow: '0 4px 14px rgba(29, 161, 242, 0.4)'
+            }}
+          >
+            Get Started
+          </Link>
+        </div>
+      </section>
+    </>
+  )
 }

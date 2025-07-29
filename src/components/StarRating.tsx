@@ -5,18 +5,23 @@ interface StarRatingProps {
 
 export default function StarRating({ rating, maxRating = 5 }: StarRatingProps) {
   return (
-    <div className="flex gap-1">
+    <div style={{ display: 'flex', alignItems: 'center', gap: '4px', marginBottom: '12px' }}>
       {[...Array(maxRating)].map((_, index) => (
         <span
           key={index}
-          className={`text-lg ${
-            index < Math.floor(rating) ? 'text-yellow-400' : 'text-gray-300'
-          }`}
+          style={{
+            fontSize: '18px',
+            color: index < Math.floor(rating) ? '#fbbf24' : '#e5e7eb'
+          }}
         >
           ★
         </span>
       ))}
-      <span className="text-sm text-deep-grey ml-2">({rating})</span>
+      <span style={{
+        fontSize: '14px',
+        color: '#657786',
+        marginLeft: '8px'
+      }}>({rating})</span>
     </div>
   )
 }

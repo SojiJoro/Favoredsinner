@@ -3,16 +3,43 @@ import { services } from '@/data/services'
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen">
-      <section className="max-w-7xl mx-auto px-6 py-12">
-        <h1 className="text-4xl md:text-5xl font-serif text-center mb-4">
+    <div style={{ minHeight: '100vh', backgroundColor: '#fafbfc' }}>
+      {/* Services Header */}
+      <section style={{
+        background: 'linear-gradient(to bottom, #e8f5fe 0%, #fafbfc 100%)',
+        padding: '80px 0 40px',
+        textAlign: 'center'
+      }}>
+        <h1 style={{
+          fontSize: 'clamp(2.5rem, 6vw, 4rem)',
+          fontFamily: 'Playfair Display, serif',
+          fontWeight: 'bold',
+          color: '#14171a',
+          marginBottom: '16px'
+        }}>
           Our Services
         </h1>
-        <p className="text-xl text-center text-deep-grey mb-12">
+        <p style={{
+          fontSize: '20px',
+          color: '#657786',
+          maxWidth: '600px',
+          margin: '0 auto'
+        }}>
           Professional solutions for your digital needs
         </p>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      </section>
+      
+      {/* Services Grid */}
+      <section style={{
+        maxWidth: '1200px',
+        margin: '0 auto',
+        padding: '40px 24px 80px'
+      }}>
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+          gap: '32px'
+        }}>
           {services.map((service) => (
             <ServiceCard key={service.id} service={service} />
           ))}
