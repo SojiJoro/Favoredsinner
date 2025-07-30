@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import Navigation from '@/components/Navigation'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -22,49 +22,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
       </head>
       <body style={{ margin: 0, fontFamily: 'Inter, sans-serif' }}>
-        <nav style={{
-          position: 'fixed',
-          top: 0,
-          width: '100%',
-          backgroundColor: 'rgba(255, 255, 255, 0.95)',
-          backdropFilter: 'blur(10px)',
-          borderBottom: '1px solid #e1e8ed',
-          zIndex: 50
-        }}>
-          <div style={{
-            maxWidth: '1200px',
-            margin: '0 auto',
-            padding: '16px 24px',
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center'
-          }}>
-            <Link
-              href="/"
-              style={{
-                fontFamily: 'Playfair Display, serif',
-                fontSize: '24px',
-                color: '#14171a',
-                textDecoration: 'none',
-                fontWeight: 'bold'
-              }}
-            >
-              Favored Sinner
-            </Link>
-            
-            <div style={{
-              display: 'flex',
-              gap: '32px',
-              alignItems: 'center'
-            }}>
-              <Link href="/about" style={{ color: '#657786', textDecoration: 'none' }}>About</Link>
-              <Link href="/services" style={{ color: '#657786', textDecoration: 'none' }}>Services</Link>
-              <Link href="/gallery" style={{ color: '#657786', textDecoration: 'none' }}>Gallery</Link>
-              <Link href="/blog" style={{ color: '#657786', textDecoration: 'none' }}>Blog</Link>
-              <Link href="/contact" style={{ color: '#657786', textDecoration: 'none' }}>Contact</Link>
-            </div>
-          </div>
-        </nav>
+        <Navigation />
         
         <main style={{ paddingTop: '73px', minHeight: '100vh' }}>
           {children}
