@@ -1,6 +1,5 @@
-import { Resend } from 'resend'
-
-const resend = new Resend(process.env.RESEND_API_KEY)
+// This is a placeholder for email functionality
+// You can integrate with services like Resend, SendGrid, or Formspree
 
 export async function sendEmail(data: {
   name: string
@@ -8,63 +7,24 @@ export async function sendEmail(data: {
   service: string
   message: string
 }) {
-  try {
-    const result = await resend.emails.send({
-      from: 'Favored Sinner Website <onboarding@resend.dev>',
-      to: 'info@favoredsinner.com',
-      replyTo: data.email,
-      subject: `New Quote Request: ${data.service}`,
-      html: `
-        <!DOCTYPE html>
-        <html>
-          <head>
-            <style>
-              body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-              .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-              .header { background-color: #1DA1F2; color: white; padding: 20px; text-align: center; }
-              .content { background-color: #f9f9f9; padding: 20px; border: 1px solid #ddd; }
-              .field { margin-bottom: 15px; }
-              .label { font-weight: bold; color: #555; }
-              .value { margin-top: 5px; }
-              .footer { text-align: center; margin-top: 20px; font-size: 12px; color: #888; }
-            </style>
-          </head>
-          <body>
-            <div class="container">
-              <div class="header">
-                <h1>New Quote Request</h1>
-              </div>
-              <div class="content">
-                <div class="field">
-                  <div class="label">Name:</div>
-                  <div class="value">${data.name}</div>
-                </div>
-                <div class="field">
-                  <div class="label">Email:</div>
-                  <div class="value"><a href="mailto:${data.email}">${data.email}</a></div>
-                </div>
-                <div class="field">
-                  <div class="label">Service Requested:</div>
-                  <div class="value">${data.service}</div>
-                </div>
-                <div class="field">
-                  <div class="label">Message:</div>
-                  <div class="value">${data.message.replace(/\n/g, '<br>')}</div>
-                </div>
-              </div>
-              <div class="footer">
-                <p>This quote request was submitted through the Favored Sinner website.</p>
-              </div>
-            </div>
-          </body>
-        </html>
-      `,
-    })
-
-    console.log('Email sent successfully:', result)
-    return { success: true }
-  } catch (error) {
-    console.error('Failed to send email:', error)
-    throw error
-  }
+  // For now, we'll just log the data
+  console.log('Email would be sent with:', data)
+  
+  // Example with Formspree (no backend needed):
+  // const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+  //   method: 'POST',
+  //   headers: { 'Content-Type': 'application/json' },
+  //   body: JSON.stringify(data)
+  // })
+  
+  // Example with Resend:
+  // const resend = new Resend(process.env.RESEND_API_KEY)
+  // await resend.emails.send({
+  //   from: 'noreply@favoredsinner.com',
+  //   to: 'info@favoredsinner.com',
+  //   subject: `New quote request: ${data.service}`,
+  //   html: `...`
+  // })
+  
+  return { success: true }
 }
