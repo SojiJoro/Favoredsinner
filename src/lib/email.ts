@@ -1,7 +1,5 @@
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 export async function sendEmail(data: {
   name: string
   email: string
@@ -9,6 +7,9 @@ export async function sendEmail(data: {
   message: string
 }) {
   try {
+    // Initialize Resend client only when needed (not at module load time)
+    const resend = new Resend(process.env.RESEND_API_KEY)
+
     const result = await resend.emails.send({
       from: 'Favored Sinner Website <onboarding@resend.dev>',
       to: 'info@favoredsinner.com',
