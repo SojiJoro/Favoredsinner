@@ -1,28 +1,30 @@
 /* src/app/globals.css */
 
 /* 1. FOUNDATION & VARIABLES */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
 
+@theme {
+  /* Colors */
+  --color-twitter-blue: #1DA1F2;
+  --color-twitter-blue-dark: #1a91da;
+  --color-twitter-blue-light: #e8f5fe;
+  --color-charcoal: #14171a;
+  --color-deep-grey: #333333;
+  --color-dark-grey: #657786;
+  --color-light-grey: #f7f9fa;
+  --color-off-white: #fafbfc;
+  --color-grey: #e1e8ed;
+
+  /* Font Families */
+  --font-family-serif: 'Playfair Display', serif;
+  --font-family-sans: 'Inter', sans-serif;
+}
+
 @layer base {
   :root {
-    /* Primary Colors */
-    --twitter-blue: #1DA1F2;
-    --twitter-blue-dark: #1a91da;
-    --twitter-blue-light: #e8f5fe;
-    
-    /* Neutral Colors */
-    --white: #ffffff;
-    --off-white: #fafbfc;
-    --light-grey: #f7f9fa;
-    --grey: #e1e8ed;
-    --dark-grey: #657786;
-    --charcoal: #14171a;
-    
-    /* Shadows */
+    /* Custom Shadows */
     --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
     --shadow-md: 0 4px 12px rgba(29, 161, 242, 0.15);
     --shadow-lg: 0 10px 25px rgba(29, 161, 242, 0.2);
@@ -188,11 +190,13 @@
   /* BUTTONS */
   .btn {
     @apply inline-flex items-center justify-center font-medium rounded-full transition-all duration-300;
-    @apply focus:outline-none focus:ring-4 focus:ring-twitter-blue focus:ring-opacity-30;
+    @apply focus:outline-none focus:ring-4 focus:ring-twitter-blue/30;
   }
 
   .btn-primary {
-    @apply btn bg-twitter-blue text-white px-8 py-4;
+    @apply inline-flex items-center justify-center font-medium rounded-full transition-all duration-300;
+    @apply focus:outline-none focus:ring-4 focus:ring-twitter-blue/30;
+    @apply bg-twitter-blue text-white px-8 py-4;
     box-shadow: 0 4px 14px 0 rgba(29, 161, 242, 0.4);
   }
 
@@ -207,7 +211,9 @@
   }
 
   .btn-outline {
-    @apply btn border-2 border-twitter-blue text-twitter-blue px-8 py-4 bg-transparent;
+    @apply inline-flex items-center justify-center font-medium rounded-full transition-all duration-300;
+    @apply focus:outline-none focus:ring-4 focus:ring-twitter-blue/30;
+    @apply border-2 border-twitter-blue text-twitter-blue px-8 py-4 bg-transparent;
   }
 
   .btn-outline:hover {
@@ -243,7 +249,7 @@
   }
 
   .gallery-item {
-    @apply relative aspect-square overflow-hidden rounded-2xl cursor-pointer group;
+    @apply relative aspect-square overflow-hidden rounded-2xl cursor-pointer;
     box-shadow: var(--shadow-sm);
   }
 
@@ -393,7 +399,7 @@
 
   .form-input {
     @apply w-full px-6 py-3 rounded-xl border border-grey bg-white;
-    @apply focus:border-twitter-blue focus:ring-4 focus:ring-twitter-blue focus:ring-opacity-20;
+    @apply focus:border-twitter-blue focus:ring-4 focus:ring-twitter-blue/20;
     @apply transition-all duration-300;
   }
 
@@ -402,16 +408,30 @@
   }
 
   .form-textarea {
-    @apply form-input resize-y min-h-[150px];
+    @apply w-full px-6 py-3 rounded-xl border border-grey bg-white;
+    @apply focus:border-twitter-blue focus:ring-4 focus:ring-twitter-blue/20;
+    @apply transition-all duration-300;
+    @apply resize-y min-h-[150px];
+  }
+
+  .form-textarea:hover {
+    @apply border-dark-grey;
   }
 
   .form-select {
-    @apply form-input appearance-none;
+    @apply w-full px-6 py-3 rounded-xl border border-grey bg-white;
+    @apply focus:border-twitter-blue focus:ring-4 focus:ring-twitter-blue/20;
+    @apply transition-all duration-300;
+    @apply appearance-none;
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23657786' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
     background-repeat: no-repeat;
     background-position: right 1rem center;
     background-size: 1.5rem;
     padding-right: 3rem;
+  }
+
+  .form-select:hover {
+    @apply border-dark-grey;
   }
 
   /* CARDS & CONTAINERS */
@@ -451,7 +471,7 @@
 
   /* LIGHTBOX */
   .lightbox {
-    @apply fixed inset-0 bg-charcoal bg-opacity-95 z-50 flex items-center justify-center p-4;
+    @apply fixed inset-0 bg-charcoal/95 z-50 flex items-center justify-center p-4;
     backdrop-filter: blur(5px);
   }
 
@@ -612,7 +632,7 @@
   }
 
   .focus-ring {
-    @apply focus:outline-none focus:ring-4 focus:ring-twitter-blue focus:ring-opacity-30;
+    @apply focus:outline-none focus:ring-4 focus:ring-twitter-blue/30;
   }
 
   /* GRADIENTS */
