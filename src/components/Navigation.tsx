@@ -10,7 +10,6 @@ export default function Navigation() {
         <div className="flex gap-4 ml-auto">
           <Link href="/about">About</Link>
           <Link href="/services">Services</Link>
-          <Link href="/gallery">Gallery</Link>
           <Link href="/blog">Blog</Link>
           <Link href="/contact">Contact</Link>
         </div>
