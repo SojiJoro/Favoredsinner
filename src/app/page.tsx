@@ -287,56 +287,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Work Section */}
-      <section style={{
-        padding: '100px 24px',
-        backgroundColor: '#14171a',
-        color: 'white'
-      }}>
-        <div style={{
-          maxWidth: '1200px',
-          margin: '0 auto',
-          textAlign: 'center'
-        }}>
-          <h2 style={{
-            fontSize: 'clamp(2.5rem, 5vw, 4rem)',
-            fontFamily: 'Playfair Display, serif',
-            fontWeight: 'bold',
-            marginBottom: '24px',
-            lineHeight: '1.2'
-          }}>
-            Creative Work
-          </h2>
-          <p style={{
-            fontSize: '1.2rem',
-            color: '#9ca3af',
-            marginBottom: '48px',
-            maxWidth: '700px',
-            margin: '0 auto 48px'
-          }}>
-            Explore surreal digital art and creative projects
-          </p>
-          <Link
-            href="/gallery"
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              backgroundColor: 'white',
-              color: '#14171a',
-              padding: '18px 40px',
-              borderRadius: '8px',
-              fontWeight: '600',
-              textDecoration: 'none',
-              fontSize: '16px',
-              boxShadow: '0 4px 14px rgba(255, 255, 255, 0.1)'
-            }}
-          >
-            View Gallery
-          </Link>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section style={{
         padding: '100px 24px',
