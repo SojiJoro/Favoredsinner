@@ -13,10 +13,10 @@ export default function ServicesPage() {
     : services.filter(service => service.category === activeCategory)
 
   const categories = [
-    { id: 'all' as Category, label: 'All Services', icon: '✨' },
-    { id: 'creative' as Category, label: 'Creative & Marketing', icon: '🎨' },
-    { id: 'devops' as Category, label: 'DevOps & Infrastructure', icon: '⚙️' },
-    { id: 'support' as Category, label: 'Support & Career', icon: '🤝' },
+    { id: 'all' as Category, label: 'All Services' },
+    { id: 'creative' as Category, label: 'Creative & Marketing' },
+    { id: 'devops' as Category, label: 'Technical Infrastructure' },
+    { id: 'support' as Category, label: 'Support & Consultation' },
   ]
 
   return (
@@ -24,46 +24,22 @@ export default function ServicesPage() {
       {/* Hero Section */}
       <section style={{
         position: 'relative',
-        background: 'linear-gradient(135deg, #e8f5fe 0%, #ffffff 50%, #e8f5fe 100%)',
-        padding: '120px 24px 80px',
-        textAlign: 'center',
-        overflow: 'hidden'
+        background: 'linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%)',
+        padding: '140px 24px 80px',
+        textAlign: 'center'
       }}>
-        {/* Decorative Elements */}
-        <div style={{
-          position: 'absolute',
-          top: '-100px',
-          right: '-100px',
-          width: '300px',
-          height: '300px',
-          background: '#1DA1F2',
-          borderRadius: '50%',
-          opacity: 0.1,
-          filter: 'blur(80px)'
-        }} />
-        <div style={{
-          position: 'absolute',
-          bottom: '-150px',
-          left: '-150px',
-          width: '400px',
-          height: '400px',
-          background: '#1DA1F2',
-          borderRadius: '50%',
-          opacity: 0.1,
-          filter: 'blur(80px)'
-        }} />
-
         <div style={{ position: 'relative', zIndex: 1, maxWidth: '900px', margin: '0 auto' }}>
           <div style={{
             display: 'inline-block',
-            backgroundColor: '#e8f5fe',
-            color: '#1DA1F2',
-            padding: '8px 20px',
-            borderRadius: '50px',
-            fontSize: '14px',
+            backgroundColor: '#14171a',
+            color: 'white',
+            padding: '8px 24px',
+            borderRadius: '6px',
+            fontSize: '13px',
             fontWeight: '600',
-            marginBottom: '24px',
-            border: '1px solid #1DA1F2'
+            marginBottom: '32px',
+            letterSpacing: '1px',
+            textTransform: 'uppercase'
           }}>
             Professional Services
           </div>
@@ -74,28 +50,30 @@ export default function ServicesPage() {
             fontWeight: 'bold',
             color: '#14171a',
             marginBottom: '24px',
-            lineHeight: '1.1'
+            lineHeight: '1.1',
+            letterSpacing: '-0.02em'
           }}>
-            Transform Your Digital Presence
+            Professional Digital Solutions
           </h1>
 
           <p style={{
-            fontSize: 'clamp(1.1rem, 2vw, 1.4rem)',
+            fontSize: 'clamp(1.1rem, 2vw, 1.3rem)',
             color: '#657786',
             maxWidth: '700px',
             margin: '0 auto 48px',
-            lineHeight: '1.6'
+            lineHeight: '1.7'
           }}>
-            From surreal creative work to rock-solid infrastructure, we deliver services that blend art and engineering.
+            Comprehensive services spanning creative design, technical infrastructure, and ongoing support to help your business thrive in the digital landscape.
           </p>
 
           {/* Stats */}
           <div style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
-            gap: '32px',
-            maxWidth: '600px',
-            margin: '0 auto'
+            gap: '40px',
+            maxWidth: '700px',
+            margin: '0 auto',
+            padding: '40px 0'
           }}>
             {[
               { number: '50+', label: 'Projects Delivered' },
@@ -104,18 +82,20 @@ export default function ServicesPage() {
             ].map((stat, index) => (
               <div key={index} style={{ textAlign: 'center' }}>
                 <div style={{
-                  fontSize: '2.5rem',
+                  fontSize: '3rem',
                   fontWeight: 'bold',
-                  color: '#1DA1F2',
+                  color: '#14171a',
                   fontFamily: 'Playfair Display, serif',
-                  marginBottom: '8px'
+                  marginBottom: '8px',
+                  lineHeight: '1'
                 }}>
                   {stat.number}
                 </div>
                 <div style={{
                   fontSize: '0.9rem',
                   color: '#657786',
-                  fontWeight: '500'
+                  fontWeight: '500',
+                  letterSpacing: '0.5px'
                 }}>
                   {stat.label}
                 </div>
@@ -132,7 +112,7 @@ export default function ServicesPage() {
         position: 'sticky',
         top: '73px',
         zIndex: 40,
-        boxShadow: '0 2px 8px rgba(0, 0, 0, 0.05)'
+        boxShadow: '0 2px 8px rgba(0, 0, 0, 0.04)'
       }}>
         <div style={{
           maxWidth: '1200px',
@@ -141,9 +121,9 @@ export default function ServicesPage() {
         }}>
           <div style={{
             display: 'flex',
-            gap: '8px',
+            gap: '12px',
             overflowX: 'auto',
-            padding: '16px 0',
+            padding: '20px 0',
             scrollbarWidth: 'none',
             msOverflowStyle: 'none'
           }}>
@@ -154,39 +134,38 @@ export default function ServicesPage() {
                 style={{
                   display: 'flex',
                   alignItems: 'center',
-                  gap: '8px',
-                  padding: '12px 24px',
-                  borderRadius: '50px',
-                  border: activeCategory === category.id ? '2px solid #1DA1F2' : '2px solid #e1e8ed',
-                  backgroundColor: activeCategory === category.id ? '#e8f5fe' : 'white',
-                  color: activeCategory === category.id ? '#1DA1F2' : '#657786',
+                  gap: '10px',
+                  padding: '14px 28px',
+                  borderRadius: '8px',
+                  border: 'none',
+                  backgroundColor: activeCategory === category.id ? '#14171a' : '#f8f9fa',
+                  color: activeCategory === category.id ? 'white' : '#657786',
                   fontWeight: activeCategory === category.id ? '600' : '500',
                   fontSize: '15px',
                   cursor: 'pointer',
                   transition: 'all 0.3s ease',
                   whiteSpace: 'nowrap',
-                  boxShadow: activeCategory === category.id ? '0 4px 12px rgba(29, 161, 242, 0.2)' : 'none'
+                  boxShadow: activeCategory === category.id ? '0 2px 8px rgba(20, 23, 26, 0.15)' : 'none'
                 }}
                 onMouseEnter={(e) => {
                   if (activeCategory !== category.id) {
-                    e.currentTarget.style.borderColor = '#1DA1F2';
-                    e.currentTarget.style.backgroundColor = '#f7f9fa';
+                    e.currentTarget.style.backgroundColor = '#e1e8ed';
+                    e.currentTarget.style.color = '#14171a';
                   }
                 }}
                 onMouseLeave={(e) => {
                   if (activeCategory !== category.id) {
-                    e.currentTarget.style.borderColor = '#e1e8ed';
-                    e.currentTarget.style.backgroundColor = 'white';
+                    e.currentTarget.style.backgroundColor = '#f8f9fa';
+                    e.currentTarget.style.color = '#657786';
                   }
                 }}
               >
-                <span style={{ fontSize: '20px' }}>{category.icon}</span>
                 <span>{category.label}</span>
                 <span style={{
-                  backgroundColor: activeCategory === category.id ? '#1DA1F2' : '#e1e8ed',
+                  backgroundColor: activeCategory === category.id ? 'rgba(255, 255, 255, 0.2)' : '#e1e8ed',
                   color: activeCategory === category.id ? 'white' : '#657786',
-                  padding: '2px 8px',
-                  borderRadius: '12px',
+                  padding: '3px 10px',
+                  borderRadius: '6px',
                   fontSize: '12px',
                   fontWeight: '600'
                 }}>
@@ -228,7 +207,6 @@ export default function ServicesPage() {
             padding: '80px 24px',
             color: '#657786'
           }}>
-            <div style={{ fontSize: '4rem', marginBottom: '16px' }}>🔍</div>
             <h3 style={{ fontSize: '1.5rem', marginBottom: '8px', color: '#14171a' }}>
               No services found
             </h3>
@@ -241,25 +219,11 @@ export default function ServicesPage() {
       <section style={{
         backgroundColor: '#14171a',
         color: 'white',
-        padding: '80px 24px',
+        padding: '100px 24px',
         textAlign: 'center',
-        position: 'relative',
-        overflow: 'hidden'
+        position: 'relative'
       }}>
-        <div style={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          width: '600px',
-          height: '600px',
-          background: '#1DA1F2',
-          borderRadius: '50%',
-          opacity: 0.05,
-          filter: 'blur(100px)'
-        }} />
-
-        <div style={{ position: 'relative', zIndex: 1, maxWidth: '700px', margin: '0 auto' }}>
+        <div style={{ position: 'relative', zIndex: 1, maxWidth: '800px', margin: '0 auto' }}>
           <h2 style={{
             fontSize: 'clamp(2rem, 5vw, 3.5rem)',
             fontFamily: 'Playfair Display, serif',
@@ -267,15 +231,15 @@ export default function ServicesPage() {
             marginBottom: '24px',
             lineHeight: '1.2'
           }}>
-            Can&rsquo;t Find What You Need?
+            Need a Custom Solution?
           </h2>
           <p style={{
             fontSize: '1.2rem',
-            color: '#e1e8ed',
+            color: '#9ca3af',
             marginBottom: '40px',
-            lineHeight: '1.6'
+            lineHeight: '1.7'
           }}>
-            Every project is unique. Let&rsquo;s discuss your specific requirements and create a custom solution.
+            Every project is unique. Let&rsquo;s discuss your specific requirements and create a tailored solution that meets your goals.
           </p>
           <a
             href="/contact"
@@ -283,28 +247,26 @@ export default function ServicesPage() {
               display: 'inline-flex',
               alignItems: 'center',
               gap: '12px',
-              backgroundColor: '#1DA1F2',
-              color: 'white',
-              padding: '16px 40px',
-              borderRadius: '50px',
+              backgroundColor: 'white',
+              color: '#14171a',
+              padding: '18px 40px',
+              borderRadius: '8px',
               fontWeight: '600',
-              fontSize: '1.1rem',
+              fontSize: '16px',
               textDecoration: 'none',
               transition: 'all 0.3s ease',
-              boxShadow: '0 8px 24px rgba(29, 161, 242, 0.3)'
+              boxShadow: '0 4px 14px rgba(255, 255, 255, 0.1)'
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = '#1a91da';
               e.currentTarget.style.transform = 'translateY(-2px)';
-              e.currentTarget.style.boxShadow = '0 12px 32px rgba(29, 161, 242, 0.4)';
+              e.currentTarget.style.boxShadow = '0 8px 24px rgba(255, 255, 255, 0.2)';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = '#1DA1F2';
               e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = '0 8px 24px rgba(29, 161, 242, 0.3)';
+              e.currentTarget.style.boxShadow = '0 4px 14px rgba(255, 255, 255, 0.1)';
             }}
           >
-            Get Custom Quote
+            Contact Us
             <span style={{ fontSize: '1.2rem' }}>→</span>
           </a>
         </div>
