@@ -1,7 +1,6 @@
 'use client'
 import Link from 'next/link'
 import StarRating from './StarRating'
-import PayPalButton from './PayPalButton'
 import { Service } from '@/data/services'
 
 interface ServiceCardProps {
@@ -147,42 +146,36 @@ export default function ServiceCard({ service }: ServiceCardProps) {
           </div>
         )}
 
-        <div style={{
-          display: 'flex',
-          gap: '12px',
-          marginTop: 'auto'
-        }}>
-          <Link
-            href={`/quote?service=${service.id}`}
-            style={{
-              flex: '1',
-              display: 'inline-flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              background: 'linear-gradient(135deg, #1DA1F2 0%, #1a91da 100%)',
-              color: 'white',
-              padding: '14px 24px',
-              borderRadius: '50px',
-              fontWeight: '600',
-              fontSize: '0.95rem',
-              textDecoration: 'none',
-              transition: 'all 0.3s ease',
-              boxShadow: '0 4px 12px rgba(29, 161, 242, 0.3)',
-              border: 'none'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-2px)';
-              e.currentTarget.style.boxShadow = '0 6px 20px rgba(29, 161, 242, 0.4)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = '0 4px 12px rgba(29, 161, 242, 0.3)';
-            }}
-          >
-            Request Quote
-          </Link>
-          <PayPalButton amount={service.price?.replace(/[^\d.]/g, '') || '0'} description={service.title} />
-        </div>
+        <Link
+          href={`/quote?service=${service.id}`}
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            background: 'linear-gradient(135deg, #1DA1F2 0%, #1a91da 100%)',
+            color: 'white',
+            padding: '14px 24px',
+            borderRadius: '50px',
+            fontWeight: '600',
+            fontSize: '0.95rem',
+            textDecoration: 'none',
+            transition: 'all 0.3s ease',
+            boxShadow: '0 4px 12px rgba(29, 161, 242, 0.3)',
+            border: 'none',
+            marginTop: 'auto',
+            width: '100%'
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-2px)';
+            e.currentTarget.style.boxShadow = '0 6px 20px rgba(29, 161, 242, 0.4)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = '0 4px 12px rgba(29, 161, 242, 0.3)';
+          }}
+        >
+          Request Quote
+        </Link>
       </div>
     </div>
   )

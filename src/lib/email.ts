@@ -7,9 +7,18 @@ export async function sendEmail(data: {
   message: string
 }) {
   try {
+    console.log('sendEmail called with service:', data.service)
+
+    // Validate API key
+    if (!process.env.RESEND_API_KEY) {
+      throw new Error('RESEND_API_KEY is not configured in environment variables')
+    }
+
+    console.log('Initializing Resend client...')
     // Initialize Resend client only when needed (not at module load time)
     const resend = new Resend(process.env.RESEND_API_KEY)
 
+    console.log('Sending email via Resend...')
     const result = await resend.emails.send({
       from: 'Favored Sinner Website <onboarding@resend.dev>',
       to: 'info@favoredsinner.com',
