@@ -43,11 +43,73 @@ export default function QuoteForm() {
 
   return (
     <form onSubmit={handleSubmit} className="max-w-xl mx-auto space-y-6">
-      {/* Form fields remain the same */}
-      {/* ... existing form fields ... */}
+      <div>
+        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+          Name *
+        </label>
+        <input
+          type="text"
+          id="name"
+          required
+          value={formData.name}
+          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          placeholder="Your full name"
+        />
+      </div>
 
-      <button 
-        type="submit" 
+      <div>
+        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+          Email *
+        </label>
+        <input
+          type="email"
+          id="email"
+          required
+          value={formData.email}
+          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          placeholder="your.email@example.com"
+        />
+      </div>
+
+      <div>
+        <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+          Service *
+        </label>
+        <select
+          id="service"
+          required
+          value={formData.service}
+          onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+        >
+          <option value="">Select a service</option>
+          {services.map((service) => (
+            <option key={service.id} value={service.title}>
+              {service.title}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <div>
+        <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+          Message *
+        </label>
+        <textarea
+          id="message"
+          required
+          rows={6}
+          value={formData.message}
+          onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+          placeholder="Tell us about your project..."
+        />
+      </div>
+
+      <button
+        type="submit"
         disabled={isSubmitting}
         className="btn-primary w-full disabled:opacity-50"
       >
