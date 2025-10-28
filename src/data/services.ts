@@ -12,9 +12,9 @@ export interface Service {
 export const services: Service[] = [
   {
     id: 'web-design',
-    title: 'Web Design',
-    description: 'Modern, responsive websites that capture your brand essence',
-    icon: '🌐',
+    title: 'Web Design & Development',
+    description: 'Modern, responsive websites built with cutting-edge technology to capture your brand essence and drive results',
+    icon: 'WD',
     rating: 5,
     testimonial: 'Exceptional design work. Delivered beyond expectations!',
     price: 'From $1,500',
@@ -23,8 +23,8 @@ export const services: Service[] = [
   {
     id: 'graphics-branding',
     title: 'Graphics Design & Branding',
-    description: 'Unique visual identities that make your brand unforgettable',
-    icon: '🎨',
+    description: 'Unique visual identities and brand strategies that make your business memorable and recognizable',
+    icon: 'GB',
     rating: 5,
     testimonial: 'Our brand has never looked better!',
     price: 'From $800',
@@ -33,8 +33,8 @@ export const services: Service[] = [
   {
     id: 'ui-design',
     title: 'User Interface Design',
-    description: 'Intuitive interfaces that users love to interact with',
-    icon: '📱',
+    description: 'Intuitive, user-centered interface designs that enhance usability and create delightful user experiences',
+    icon: 'UI',
     rating: 5,
     price: 'From $1,200',
     category: 'creative'
@@ -42,8 +42,8 @@ export const services: Service[] = [
   {
     id: 'seo-content',
     title: 'SEO & Content Strategy',
-    description: 'Get found online with optimized content that converts',
-    icon: '📈',
+    description: 'Data-driven SEO strategies and compelling content that improves search rankings and converts visitors',
+    icon: 'SEO',
     rating: 4.5,
     price: 'From $600/month',
     category: 'creative'
@@ -51,26 +51,17 @@ export const services: Service[] = [
   {
     id: 'social-media',
     title: 'Social Media Management',
-    description: 'Engage your audience with strategic social presence',
-    icon: '📲',
+    description: 'Strategic social media management to build your brand presence and engage with your target audience',
+    icon: 'SM',
     rating: 5,
     price: 'From $800/month',
     category: 'creative'
   },
   {
-    id: 'social-growth',
-    title: 'Social Media Likes & Followers',
-    description: 'Boost your social proof with real engagement',
-    icon: '👥',
-    rating: 4.5,
-    price: 'Custom quote',
-    category: 'creative'
-  },
-  {
     id: 'ppc-campaigns',
     title: 'PPC & Online Campaigns',
-    description: 'Targeted ads that bring real results',
-    icon: '🎯',
+    description: 'Targeted pay-per-click advertising campaigns optimized for maximum ROI and business growth',
+    icon: 'PPC',
     rating: 4.5,
     price: 'From $500/month + ad spend',
     category: 'creative'
@@ -78,8 +69,8 @@ export const services: Service[] = [
   {
     id: 'cloud-infrastructure',
     title: 'Cloud Infrastructure Management',
-    description: 'Scalable cloud solutions for modern businesses',
-    icon: '☁️',
+    description: 'Enterprise-grade cloud solutions with scalable architecture, monitoring, and optimization',
+    icon: 'CI',
     rating: 5,
     price: 'From $500/month',
     category: 'devops'
@@ -87,8 +78,8 @@ export const services: Service[] = [
   {
     id: 'network-design',
     title: 'Network Design & Implementation',
-    description: 'Robust networks built for performance and reliability',
-    icon: '🌐',
+    description: 'Custom network architectures built for performance, security, and reliability at scale',
+    icon: 'ND',
     rating: 5,
     price: 'Custom quote',
     category: 'devops'
@@ -96,8 +87,8 @@ export const services: Service[] = [
   {
     id: 'disaster-recovery',
     title: 'Disaster Recovery & Backup',
-    description: 'Never lose critical data with our backup solutions',
-    icon: '💾',
+    description: 'Comprehensive backup and disaster recovery solutions to protect your critical business data',
+    icon: 'DR',
     rating: 5,
     price: 'From $300/month',
     category: 'devops'
@@ -105,8 +96,8 @@ export const services: Service[] = [
   {
     id: 'cybersecurity',
     title: 'Cybersecurity & Compliance',
-    description: 'Protect your business from digital threats',
-    icon: '🔐',
+    description: 'Advanced security measures and compliance frameworks to protect against digital threats',
+    icon: 'CS',
     rating: 5,
     testimonial: 'They secured our entire infrastructure professionally',
     price: 'From $1,000',
@@ -115,8 +106,8 @@ export const services: Service[] = [
   {
     id: 'it-support',
     title: 'IT Support & Maintenance',
-    description: 'Keep your systems running smoothly 24/7',
-    icon: '🔧',
+    description: 'Round-the-clock technical support and proactive system maintenance to keep your business running',
+    icon: 'IT',
     rating: 5,
     price: 'From $200/month',
     category: 'support'
@@ -124,17 +115,17 @@ export const services: Service[] = [
   {
     id: 'helpdesk',
     title: 'Onsite & Remote Helpdesk',
-    description: 'Expert support whenever and wherever you need it',
-    icon: '🆘',
+    description: 'Professional helpdesk services with fast response times, available both onsite and remotely',
+    icon: 'HD',
     rating: 5,
     price: 'From $150/month',
     category: 'support'
   },
   {
     id: 'cv-review',
-    title: 'CV Review',
-    description: 'Stand out with a professionally crafted resume',
-    icon: '📄',
+    title: 'Professional CV Review',
+    description: 'Expert resume review and optimization to help you stand out and land your dream job',
+    icon: 'CV',
     rating: 5,
     testimonial: 'Got my dream job thanks to the CV makeover!',
     price: 'From $150',

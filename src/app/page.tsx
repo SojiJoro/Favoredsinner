@@ -6,284 +6,382 @@ export default function Home() {
       {/* Hero Section */}
       <section style={{
         minHeight: '100vh',
-        background: 'linear-gradient(135deg, #ffffff 0%, #e8f5fe 100%)',
+        background: 'linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         position: 'relative',
-        overflow: 'hidden'
+        padding: '120px 24px 80px'
       }}>
-        {/* Animated orbs */}
         <div style={{
-          position: 'absolute',
-          top: '-100px',
-          left: '-100px',
-          width: '400px',
-          height: '400px',
-          background: '#1DA1F2',
-          borderRadius: '50%',
-          filter: 'blur(120px)',
-          opacity: '0.2'
-        }}></div>
-        <div style={{
-          position: 'absolute',
-          bottom: '-200px',
-          right: '-200px',
-          width: '600px',
-          height: '600px',
-          background: '#1DA1F2',
-          borderRadius: '50%',
-          filter: 'blur(120px)',
-          opacity: '0.2'
-        }}></div>
-
-        <div style={{
-          maxWidth: '1024px',
+          maxWidth: '1200px',
           margin: '0 auto',
-          padding: '0 24px',
           textAlign: 'center',
           position: 'relative',
           zIndex: 10
         }}>
+          {/* Badge */}
+          <div style={{
+            display: 'inline-block',
+            backgroundColor: '#14171a',
+            color: 'white',
+            padding: '8px 24px',
+            borderRadius: '6px',
+            fontSize: '13px',
+            fontWeight: '600',
+            marginBottom: '32px',
+            letterSpacing: '1px',
+            textTransform: 'uppercase'
+          }}>
+            Professional Digital Services
+          </div>
+
+          {/* Main Headline */}
           <h1 style={{
-            fontSize: 'clamp(3rem, 8vw, 5rem)',
+            fontSize: 'clamp(3rem, 7vw, 5.5rem)',
             fontFamily: 'Playfair Display, serif',
             fontWeight: 'bold',
             color: '#14171a',
-            marginBottom: '24px',
-            lineHeight: '1.1'
+            marginBottom: '32px',
+            lineHeight: '1.1',
+            letterSpacing: '-0.02em'
           }}>
-            Art like a dream. Tech like a machine.
+            Elevate Your<br/>Digital Presence
           </h1>
+
+          {/* Subtitle */}
           <p style={{
-            fontSize: 'clamp(1.25rem, 3vw, 2rem)',
+            fontSize: 'clamp(1.1rem, 2.5vw, 1.4rem)',
             color: '#657786',
-            marginBottom: '24px'
+            marginBottom: '48px',
+            maxWidth: '800px',
+            margin: '0 auto 48px',
+            lineHeight: '1.7'
           }}>
-            I design, I deploy, I disturb comfort zones — with visuals, strategy, and code that all hit different.
+            Expert web design, creative services, and technical infrastructure solutions
+            for businesses that demand excellence.
           </p>
-          <p style={{
-            fontSize: 'clamp(1rem, 2.5vw, 1.5rem)',
-            color: '#1DA1F2',
-            fontWeight: '500',
-            marginBottom: '48px'
-          }}>
-            <Link href="/gallery" style={{ textDecoration: 'none', color: '#1DA1F2' }}>
-              Explore the work
-            </Link>
-          </p>
-          
+
+          {/* CTA Buttons */}
           <div style={{
             display: 'flex',
             flexDirection: 'row',
             gap: '16px',
             justifyContent: 'center',
-            flexWrap: 'wrap'
+            flexWrap: 'wrap',
+            marginBottom: '80px'
           }}>
-            <Link 
-              href="/gallery" 
+            <Link
+              href="/services"
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                backgroundColor: '#1DA1F2',
+                backgroundColor: '#14171a',
                 color: 'white',
-                padding: '16px 32px',
-                borderRadius: '50px',
-                fontWeight: '500',
+                padding: '18px 40px',
+                borderRadius: '8px',
+                fontWeight: '600',
                 textDecoration: 'none',
-                boxShadow: '0 4px 14px rgba(29, 161, 242, 0.4)'
+                fontSize: '16px',
+                transition: 'all 0.3s ease',
+                boxShadow: '0 4px 14px rgba(20, 23, 26, 0.3)'
               }}
             >
-              View Surreal Art
+              View Services
             </Link>
-            <Link 
-              href="/services" 
+            <Link
+              href="/contact"
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                border: '2px solid #1DA1F2',
-                color: '#1DA1F2',
-                padding: '14px 30px',
-                borderRadius: '50px',
-                fontWeight: '500',
+                border: '2px solid #14171a',
+                color: '#14171a',
+                padding: '16px 38px',
+                borderRadius: '8px',
+                fontWeight: '600',
                 textDecoration: 'none',
-                backgroundColor: 'transparent'
+                fontSize: '16px',
+                backgroundColor: 'transparent',
+                transition: 'all 0.3s ease'
               }}
             >
-              Request a Service
+              Get in Touch
             </Link>
+          </div>
+
+          {/* Services Overview */}
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+            gap: '32px',
+            marginTop: '80px',
+            textAlign: 'left'
+          }}>
+            {/* Creative Services */}
+            <div style={{
+              backgroundColor: 'white',
+              borderRadius: '12px',
+              padding: '40px',
+              boxShadow: '0 2px 12px rgba(0, 0, 0, 0.06)',
+              border: '1px solid #e1e8ed',
+              transition: 'all 0.3s ease'
+            }}>
+              <div style={{
+                width: '48px',
+                height: '48px',
+                backgroundColor: '#14171a',
+                borderRadius: '8px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '24px',
+                fontSize: '24px',
+                color: 'white',
+                fontWeight: 'bold'
+              }}>
+                C
+              </div>
+              <h3 style={{
+                fontFamily: 'Playfair Display, serif',
+                fontSize: '24px',
+                marginBottom: '12px',
+                color: '#14171a',
+                fontWeight: 'bold'
+              }}>Creative Services</h3>
+              <p style={{
+                color: '#657786',
+                lineHeight: '1.7',
+                marginBottom: '20px',
+                fontSize: '15px'
+              }}>
+                Web design, branding, UI/UX, and digital marketing solutions that make your brand stand out.
+              </p>
+              <Link
+                href="/services?category=creative"
+                style={{
+                  color: '#14171a',
+                  textDecoration: 'none',
+                  fontWeight: '600',
+                  fontSize: '14px',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px'
+                }}
+              >
+                Explore Creative →
+              </Link>
+            </div>
+
+            {/* DevOps & Infrastructure */}
+            <div style={{
+              backgroundColor: 'white',
+              borderRadius: '12px',
+              padding: '40px',
+              boxShadow: '0 2px 12px rgba(0, 0, 0, 0.06)',
+              border: '1px solid #e1e8ed',
+              transition: 'all 0.3s ease'
+            }}>
+              <div style={{
+                width: '48px',
+                height: '48px',
+                backgroundColor: '#14171a',
+                borderRadius: '8px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '24px',
+                fontSize: '24px',
+                color: 'white',
+                fontWeight: 'bold'
+              }}>
+                D
+              </div>
+              <h3 style={{
+                fontFamily: 'Playfair Display, serif',
+                fontSize: '24px',
+                marginBottom: '12px',
+                color: '#14171a',
+                fontWeight: 'bold'
+              }}>Technical Infrastructure</h3>
+              <p style={{
+                color: '#657786',
+                lineHeight: '1.7',
+                marginBottom: '20px',
+                fontSize: '15px'
+              }}>
+                Cloud infrastructure, network design, cybersecurity, and disaster recovery for enterprise reliability.
+              </p>
+              <Link
+                href="/services?category=devops"
+                style={{
+                  color: '#14171a',
+                  textDecoration: 'none',
+                  fontWeight: '600',
+                  fontSize: '14px',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px'
+                }}
+              >
+                Explore Infrastructure →
+              </Link>
+            </div>
+
+            {/* Support Services */}
+            <div style={{
+              backgroundColor: 'white',
+              borderRadius: '12px',
+              padding: '40px',
+              boxShadow: '0 2px 12px rgba(0, 0, 0, 0.06)',
+              border: '1px solid #e1e8ed',
+              transition: 'all 0.3s ease'
+            }}>
+              <div style={{
+                width: '48px',
+                height: '48px',
+                backgroundColor: '#14171a',
+                borderRadius: '8px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '24px',
+                fontSize: '24px',
+                color: 'white',
+                fontWeight: 'bold'
+              }}>
+                S
+              </div>
+              <h3 style={{
+                fontFamily: 'Playfair Display, serif',
+                fontSize: '24px',
+                marginBottom: '12px',
+                color: '#14171a',
+                fontWeight: 'bold'
+              }}>Support & Consultation</h3>
+              <p style={{
+                color: '#657786',
+                lineHeight: '1.7',
+                marginBottom: '20px',
+                fontSize: '15px'
+              }}>
+                24/7 IT support, helpdesk services, and professional career consultation to keep you moving forward.
+              </p>
+              <Link
+                href="/services?category=support"
+                style={{
+                  color: '#14171a',
+                  textDecoration: 'none',
+                  fontWeight: '600',
+                  fontSize: '14px',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px'
+                }}
+              >
+                Explore Support →
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Feature Section */}
+      {/* Featured Work Section */}
       <section style={{
-        padding: '80px 0',
-        backgroundColor: '#fafbfc'
+        padding: '100px 24px',
+        backgroundColor: '#14171a',
+        color: 'white'
       }}>
         <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-          gap: '32px',
           maxWidth: '1200px',
           margin: '0 auto',
-          padding: '0 24px'
+          textAlign: 'center'
         }}>
-          {/* Digital Art Card */}
-          <div style={{
-            backgroundColor: 'white',
-            borderRadius: '16px',
-            padding: '32px',
-            textAlign: 'center',
-            boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)',
-            border: '1px solid #e1e8ed'
+          <h2 style={{
+            fontSize: 'clamp(2.5rem, 5vw, 4rem)',
+            fontFamily: 'Playfair Display, serif',
+            fontWeight: 'bold',
+            marginBottom: '24px',
+            lineHeight: '1.2'
           }}>
-            <div style={{
-              width: '80px',
-              height: '80px',
-              margin: '0 auto 24px',
-              borderRadius: '16px',
-              display: 'flex',
+            Creative Work
+          </h2>
+          <p style={{
+            fontSize: '1.2rem',
+            color: '#9ca3af',
+            marginBottom: '48px',
+            maxWidth: '700px',
+            margin: '0 auto 48px'
+          }}>
+            Explore surreal digital art and creative projects
+          </p>
+          <Link
+            href="/gallery"
+            style={{
+              display: 'inline-flex',
               alignItems: 'center',
               justifyContent: 'center',
-              background: 'linear-gradient(135deg, #e8f5fe 0%, #1DA1F2 100%)',
-              fontSize: '36px'
-            }}>
-              🎨
-            </div>
-            <h3 style={{
-              fontFamily: 'Playfair Display, serif',
-              fontSize: '24px',
-              marginBottom: '12px',
-              color: '#14171a'
-            }}>Digital Art</h3>
-            <p style={{
-              color: '#657786',
-              lineHeight: '1.6'
-            }}>
-              Surreal creations that challenge perception
-            </p>
-          </div>
-          
-          {/* Web Design Card */}
-          <div style={{
-            backgroundColor: 'white',
-            borderRadius: '16px',
-            padding: '32px',
-            textAlign: 'center',
-            boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)',
-            border: '1px solid #e1e8ed'
-          }}>
-            <div style={{
-              width: '80px',
-              height: '80px',
-              margin: '0 auto 24px',
-              borderRadius: '16px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              background: 'linear-gradient(135deg, #e8f5fe 0%, #1DA1F2 100%)',
-              fontSize: '36px'
-            }}>
-              💻
-            </div>
-            <h3 style={{
-              fontFamily: 'Playfair Display, serif',
-              fontSize: '24px',
-              marginBottom: '12px',
-              color: '#14171a'
-            }}>Web Design</h3>
-            <p style={{
-              color: '#657786',
-              lineHeight: '1.6'
-            }}>
-              Clean, modern websites that tell your story
-            </p>
-          </div>
-          
-          {/* Digital Strategy Card */}
-          <div style={{
-            backgroundColor: 'white',
-            borderRadius: '16px',
-            padding: '32px',
-            textAlign: 'center',
-            boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)',
-            border: '1px solid #e1e8ed'
-          }}>
-            <div style={{
-              width: '80px',
-              height: '80px',
-              margin: '0 auto 24px',
-              borderRadius: '16px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              background: 'linear-gradient(135deg, #e8f5fe 0%, #1DA1F2 100%)',
-              fontSize: '36px'
-            }}>
-              🚀
-            </div>
-            <h3 style={{
-              fontFamily: 'Playfair Display, serif',
-              fontSize: '24px',
-              marginBottom: '12px',
-              color: '#14171a'
-            }}>Digital Strategy</h3>
-            <p style={{
-              color: '#657786',
-              lineHeight: '1.6'
-            }}>
-              SEO, social media, and growth solutions
-            </p>
-          </div>
+              backgroundColor: 'white',
+              color: '#14171a',
+              padding: '18px 40px',
+              borderRadius: '8px',
+              fontWeight: '600',
+              textDecoration: 'none',
+              fontSize: '16px',
+              boxShadow: '0 4px 14px rgba(255, 255, 255, 0.1)'
+            }}
+          >
+            View Gallery
+          </Link>
         </div>
       </section>
 
       {/* CTA Section */}
       <section style={{
-        padding: '80px 0',
-        backgroundColor: 'white'
+        padding: '100px 24px',
+        backgroundColor: '#f8f9fa'
       }}>
         <div style={{
-          maxWidth: '1024px',
+          maxWidth: '900px',
           margin: '0 auto',
-          padding: '0 24px',
           textAlign: 'center'
         }}>
           <h2 style={{
-            fontSize: 'clamp(2rem, 5vw, 3rem)',
+            fontSize: 'clamp(2rem, 5vw, 3.5rem)',
             fontFamily: 'Playfair Display, serif',
             fontWeight: 'bold',
             color: '#14171a',
-            marginBottom: '24px'
+            marginBottom: '24px',
+            lineHeight: '1.2'
           }}>
-            Ready to bring your vision to life?
+            Ready to Start Your Project?
           </h2>
           <p style={{
-            fontSize: '18px',
+            fontSize: '1.2rem',
             color: '#657786',
-            marginBottom: '32px'
+            marginBottom: '40px',
+            lineHeight: '1.7'
           }}>
-            Let&apos;s create something extraordinary together.
+            Let&apos;s discuss how we can help you achieve your goals with professional digital solutions.
           </p>
-          <Link 
-            href="/contact" 
+          <Link
+            href="/contact"
             style={{
               display: 'inline-flex',
               alignItems: 'center',
               justifyContent: 'center',
-              backgroundColor: '#1DA1F2',
+              backgroundColor: '#14171a',
               color: 'white',
-              padding: '16px 32px',
-              borderRadius: '50px',
-              fontWeight: '500',
+              padding: '18px 40px',
+              borderRadius: '8px',
+              fontWeight: '600',
               textDecoration: 'none',
-              boxShadow: '0 4px 14px rgba(29, 161, 242, 0.4)'
+              fontSize: '16px',
+              boxShadow: '0 4px 14px rgba(20, 23, 26, 0.3)'
             }}
           >
-            Get Started
+            Contact Us
           </Link>
         </div>
       </section>
