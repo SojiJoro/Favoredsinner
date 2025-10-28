@@ -59,7 +59,6 @@ export default function RootLayout({
             }}>
               <Link href="/about" style={{ color: '#657786', textDecoration: 'none' }}>About</Link>
               <Link href="/services" style={{ color: '#657786', textDecoration: 'none' }}>Services</Link>
-              <Link href="/gallery" style={{ color: '#657786', textDecoration: 'none' }}>Gallery</Link>
               <Link href="/blog" style={{ color: '#657786', textDecoration: 'none' }}>Blog</Link>
               <Link href="/contact" style={{ color: '#657786', textDecoration: 'none' }}>Contact</Link>
             </div>
