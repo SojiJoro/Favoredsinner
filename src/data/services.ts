@@ -6,6 +6,7 @@ export interface Service {
   rating: number
   testimonial?: string
   price?: string
+  category: 'creative' | 'devops' | 'support'
 }
 
 export const services: Service[] = [
@@ -16,7 +17,8 @@ export const services: Service[] = [
     icon: '🌐',
     rating: 5,
     testimonial: 'Exceptional design work. Delivered beyond expectations!',
-    price: 'From $1,500'
+    price: 'From $1,500',
+    category: 'creative'
   },
   {
     id: 'graphics-branding',
@@ -25,7 +27,8 @@ export const services: Service[] = [
     icon: '🎨',
     rating: 5,
     testimonial: 'Our brand has never looked better!',
-    price: 'From $800'
+    price: 'From $800',
+    category: 'creative'
   },
   {
     id: 'ui-design',
@@ -33,7 +36,8 @@ export const services: Service[] = [
     description: 'Intuitive interfaces that users love to interact with',
     icon: '📱',
     rating: 5,
-    price: 'From $1,200'
+    price: 'From $1,200',
+    category: 'creative'
   },
   {
     id: 'seo-content',
@@ -41,7 +45,8 @@ export const services: Service[] = [
     description: 'Get found online with optimized content that converts',
     icon: '📈',
     rating: 4.5,
-    price: 'From $600/month'
+    price: 'From $600/month',
+    category: 'creative'
   },
   {
     id: 'social-media',
@@ -49,7 +54,8 @@ export const services: Service[] = [
     description: 'Engage your audience with strategic social presence',
     icon: '📲',
     rating: 5,
-    price: 'From $800/month'
+    price: 'From $800/month',
+    category: 'creative'
   },
   {
     id: 'social-growth',
@@ -57,7 +63,8 @@ export const services: Service[] = [
     description: 'Boost your social proof with real engagement',
     icon: '👥',
     rating: 4.5,
-    price: 'Custom quote'
+    price: 'Custom quote',
+    category: 'creative'
   },
   {
     id: 'ppc-campaigns',
@@ -65,23 +72,35 @@ export const services: Service[] = [
     description: 'Targeted ads that bring real results',
     icon: '🎯',
     rating: 4.5,
-    price: 'From $500/month + ad spend'
+    price: 'From $500/month + ad spend',
+    category: 'creative'
   },
   {
-    id: 'it-support',
-    title: 'IT Support & Maintenance',
-    description: 'Keep your systems running smoothly 24/7',
-    icon: '🔧',
+    id: 'cloud-infrastructure',
+    title: 'Cloud Infrastructure Management',
+    description: 'Scalable cloud solutions for modern businesses',
+    icon: '☁️',
     rating: 5,
-    price: 'From $200/month'
+    price: 'From $500/month',
+    category: 'devops'
   },
   {
-    id: 'helpdesk',
-    title: 'Onsite & Remote Helpdesk',
-    description: 'Expert support whenever and wherever you need it',
-    icon: '🆘',
+    id: 'network-design',
+    title: 'Network Design & Implementation',
+    description: 'Robust networks built for performance and reliability',
+    icon: '🌐',
     rating: 5,
-    price: 'From $150/month'
+    price: 'Custom quote',
+    category: 'devops'
+  },
+  {
+    id: 'disaster-recovery',
+    title: 'Disaster Recovery & Backup',
+    description: 'Never lose critical data with our backup solutions',
+    icon: '💾',
+    rating: 5,
+    price: 'From $300/month',
+    category: 'devops'
   },
   {
     id: 'cybersecurity',
@@ -90,31 +109,26 @@ export const services: Service[] = [
     icon: '🔐',
     rating: 5,
     testimonial: 'They secured our entire infrastructure professionally',
-    price: 'From $1,000'
+    price: 'From $1,000',
+    category: 'devops'
   },
   {
-    id: 'cloud-infrastructure',
-    title: 'Cloud Infrastructure Management',
-    description: 'Scalable cloud solutions for modern businesses',
-    icon: '☁️',
+    id: 'it-support',
+    title: 'IT Support & Maintenance',
+    description: 'Keep your systems running smoothly 24/7',
+    icon: '🔧',
     rating: 5,
-    price: 'From $500/month'
+    price: 'From $200/month',
+    category: 'support'
   },
   {
-    id: 'network-design',
-    title: 'Network Design & Implementation',
-    description: 'Robust networks built for performance and reliability',
-    icon: '🌐',
+    id: 'helpdesk',
+    title: 'Onsite & Remote Helpdesk',
+    description: 'Expert support whenever and wherever you need it',
+    icon: '🆘',
     rating: 5,
-    price: 'Custom quote'
-  },
-  {
-    id: 'disaster-recovery',
-    title: 'Disaster Recovery & Backup',
-    description: 'Never lose critical data with our backup solutions',
-    icon: '💾',
-    rating: 5,
-    price: 'From $300/month'
+    price: 'From $150/month',
+    category: 'support'
   },
   {
     id: 'cv-review',
@@ -123,6 +137,7 @@ export const services: Service[] = [
     icon: '📄',
     rating: 5,
     testimonial: 'Got my dream job thanks to the CV makeover!',
-    price: 'From $150'
+    price: 'From $150',
+    category: 'support'
   }
 ]
