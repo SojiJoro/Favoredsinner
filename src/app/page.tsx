@@ -287,6 +287,233 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section style={{
+        padding: '100px 24px',
+        backgroundColor: 'white'
+      }}>
+        <div style={{
+          maxWidth: '1200px',
+          margin: '0 auto'
+        }}>
+          <div style={{ textAlign: 'center', marginBottom: '64px' }}>
+            <h2 style={{
+              fontSize: 'clamp(2rem, 5vw, 3.5rem)',
+              fontFamily: 'Playfair Display, serif',
+              fontWeight: 'bold',
+              color: '#14171a',
+              marginBottom: '16px',
+              lineHeight: '1.2'
+            }}>
+              Client Success Stories
+            </h2>
+            <p style={{
+              fontSize: '1.2rem',
+              color: '#657786',
+              maxWidth: '700px',
+              margin: '0 auto'
+            }}>
+              Real results from businesses we&apos;ve helped transform
+            </p>
+          </div>
+
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+            gap: '32px'
+          }}>
+            {/* Testimonial 1 */}
+            <div style={{
+              backgroundColor: '#f8f9fa',
+              borderRadius: '16px',
+              padding: '40px',
+              border: '1px solid #e1e8ed',
+              position: 'relative'
+            }}>
+              <div style={{
+                fontSize: '48px',
+                color: '#e1e8ed',
+                fontFamily: 'Georgia, serif',
+                lineHeight: '1',
+                marginBottom: '16px'
+              }}>
+                &ldquo;
+              </div>
+              <p style={{
+                fontSize: '16px',
+                color: '#14171a',
+                lineHeight: '1.7',
+                marginBottom: '24px',
+                fontStyle: 'italic'
+              }}>
+                Exceptional design work. The website they delivered exceeded our expectations and perfectly captures our brand essence. Our online presence has never been stronger.
+              </p>
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '12px'
+              }}>
+                <div style={{
+                  width: '48px',
+                  height: '48px',
+                  borderRadius: '50%',
+                  backgroundColor: '#14171a',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: 'white',
+                  fontWeight: 'bold',
+                  fontSize: '18px'
+                }}>
+                  S
+                </div>
+                <div>
+                  <div style={{
+                    fontWeight: '600',
+                    color: '#14171a',
+                    fontSize: '15px'
+                  }}>
+                    Sarah Mitchell
+                  </div>
+                  <div style={{
+                    fontSize: '14px',
+                    color: '#657786'
+                  }}>
+                    CEO, Creative Studio
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Testimonial 2 */}
+            <div style={{
+              backgroundColor: '#f8f9fa',
+              borderRadius: '16px',
+              padding: '40px',
+              border: '1px solid #e1e8ed',
+              position: 'relative'
+            }}>
+              <div style={{
+                fontSize: '48px',
+                color: '#e1e8ed',
+                fontFamily: 'Georgia, serif',
+                lineHeight: '1',
+                marginBottom: '16px'
+              }}>
+                &ldquo;
+              </div>
+              <p style={{
+                fontSize: '16px',
+                color: '#14171a',
+                lineHeight: '1.7',
+                marginBottom: '24px',
+                fontStyle: 'italic'
+              }}>
+                They secured our entire infrastructure professionally and efficiently. The cybersecurity audit identified vulnerabilities we didn&apos;t know existed. Now we sleep better at night.
+              </p>
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '12px'
+              }}>
+                <div style={{
+                  width: '48px',
+                  height: '48px',
+                  borderRadius: '50%',
+                  backgroundColor: '#14171a',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: 'white',
+                  fontWeight: 'bold',
+                  fontSize: '18px'
+                }}>
+                  M
+                </div>
+                <div>
+                  <div style={{
+                    fontWeight: '600',
+                    color: '#14171a',
+                    fontSize: '15px'
+                  }}>
+                    Marcus Thompson
+                  </div>
+                  <div style={{
+                    fontSize: '14px',
+                    color: '#657786'
+                  }}>
+                    CTO, Tech Solutions Inc
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Testimonial 3 */}
+            <div style={{
+              backgroundColor: '#f8f9fa',
+              borderRadius: '16px',
+              padding: '40px',
+              border: '1px solid #e1e8ed',
+              position: 'relative'
+            }}>
+              <div style={{
+                fontSize: '48px',
+                color: '#e1e8ed',
+                fontFamily: 'Georgia, serif',
+                lineHeight: '1',
+                marginBottom: '16px'
+              }}>
+                &ldquo;
+              </div>
+              <p style={{
+                fontSize: '16px',
+                color: '#14171a',
+                lineHeight: '1.7',
+                marginBottom: '24px',
+                fontStyle: 'italic'
+              }}>
+                Got my dream job thanks to the CV makeover! They transformed my resume from generic to exceptional, highlighting my skills in a way that recruiters actually noticed.
+              </p>
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '12px'
+              }}>
+                <div style={{
+                  width: '48px',
+                  height: '48px',
+                  borderRadius: '50%',
+                  backgroundColor: '#14171a',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: 'white',
+                  fontWeight: 'bold',
+                  fontSize: '18px'
+                }}>
+                  J
+                </div>
+                <div>
+                  <div style={{
+                    fontWeight: '600',
+                    color: '#14171a',
+                    fontSize: '15px'
+                  }}>
+                    Jessica Rodriguez
+                  </div>
+                  <div style={{
+                    fontSize: '14px',
+                    color: '#657786'
+                  }}>
+                    Software Engineer
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section style={{
         padding: '100px 24px',
